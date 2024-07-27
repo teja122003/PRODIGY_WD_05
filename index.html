@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    body {
+      background-image: url('https://race.com/wp-content/uploads/2023/04/can-weather-impact-wifi-1000x510.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-color: rgba(11, 16, 164, 0.5); /* Optional: Add a semi-transparent background for better readability */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      margin: 0.5em 0;
+    }
+    form {
+      margin-bottom: 1em;
+    }
+    input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #e3e2ed;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Weather App</h1>
+    <form action="/weather" method="get">
+      <input type="text" name="address" placeholder="Enter location" required>
+      <input type="submit" value="Get Weather">
+    </form>
+    <div id="weather-info">
+      <!-- Weather information will be displayed here -->
+    </div>
+  </div>
+</body>
+</html>
